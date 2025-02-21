@@ -7,7 +7,7 @@ const freelancers = [
 //func to make the table
 function createFreelancerTable() {
   const container = document.getElementById("freelancerTable");
-}
+
 
 //table element
 const table = document.createElement("table");
@@ -15,6 +15,7 @@ const table = document.createElement("table");
 //table header
 const headerRow = document.createElement("tr");
 const headers = ["Name", "Occupation", "Starting Price"];
+
 headers.forEach(text => {
     let th = document.createElement("th");
     th.textContent = text;
@@ -32,9 +33,9 @@ freelancers.forEach(freelancer => {
         row.appendChild(td);
     });
     table.appendChild(row);
-
-    container.appendChild(table);
 });
+container.appendChild(table);
+}
 
 
 createFreelancerTable();
